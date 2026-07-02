@@ -1,0 +1,134 @@
+# @docstring
+# Starship prompt — Predawn palette · unified WSL zsh + Windows PowerShell.
+# Design principle: minimal but detailed — modules appear ONLY when relevant
+# (git status only if dirty · venv only if active · node only in JS project · duration only if slow).
+#
+# Palette anchors (Predawn — Jamie Wilson):
+#   blue     #8197bf   purple   #b294bb   green    #99ad6a
+#   yellow   #f4bf75   orange   #e0a374   red      #cf6a4c
+#   muted    #c9c7be   fg-mid   #828282
+
+add_newline = false
+command_timeout = 1000
+
+# @docstring
+# Prompt layout:
+#   line 1:  dir  [git] [python-venv] [node]  [cmd_duration]
+#   line 2:  ❯ (green ok · red error · yellow vim-cmd mode)
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$cmd_duration\
+$fill\
+$time\
+$line_break\
+$character"""
+
+# @docstring
+# Right-side fill so time floats to the right end of line 1.
+[fill]
+symbol = " "
+
+# ==========================================
+# DIRECTORY
+# ==========================================
+[directory]
+style = "bold #8197bf"
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only = "  "
+read_only_style = "#cf6a4c"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Desktop"   = " "
+"Projects"  = " "
+
+# ==========================================
+# GIT — branch + only-when-dirty status
+# ==========================================
+[git_branch]
+symbol = " "
+style = "#b294bb"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "bold #cf6a4c"
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = "⚔ "
+ahead      = "⇡${count} "
+behind     = "⇣${count} "
+diverged   = "⇕ ⇡${ahead_count}⇣${behind_count} "
+untracked  = "?${count} "
+stashed    = " ${count} "
+modified   = "!${count} "
+staged     = "+${count} "
+renamed    = "»${count} "
+deleted    = "✘${count} "
+
+# ==========================================
+# PYTHON — venv name (always shown when activated) + version when in Python project
+# ==========================================
+[python]
+symbol = " "
+style = "bold #99ad6a"
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+python_binary = ["python3", "python"]
+detect_extensions = ["py"]
+detect_files = ["requirements.txt", "pyproject.toml", "Pipfile", "setup.py", ".python-version"]
+
+# ==========================================
+# NODE.JS — only in JS projects (package.json or node_modules)
+# ==========================================
+[nodejs]
+symbol = " "
+style = "bold #99ad6a"
+format = "[$symbol($version )]($style)"
+detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts", "tsx", "jsx"]
+detect_files = ["package.json", ".nvmrc", ".node-version"]
+detect_folders = ["node_modules"]
+
+# ==========================================
+# COMMAND DURATION — only if > 2s (avoid noise)
+# ==========================================
+[cmd_duration]
+min_time = 2000
+style = "bold #f4bf75"
+format = "took [$duration]($style) "
+
+# ==========================================
+# TIME (right side, muted)
+# ==========================================
+[time]
+disabled = false
+style = "#828282"
+format = "[$time]($style)"
+time_format = "%H:%M"
+
+# ==========================================
+# PROMPT CHARACTER
+# ==========================================
+[character]
+success_symbol = "[❯](bold #99ad6a)"
+error_symbol   = "[❯](bold #cf6a4c)"
+vimcmd_symbol  = "[❮](bold #f4bf75)"
+
+# ==========================================
+# EXTRA — hostname/user (visible only in SSH sessions)
+# ==========================================
+[hostname]
+ssh_only = true
+style = "bold #e0a374"
+format = "[$ssh_symbol$hostname]($style) "
+ssh_symbol = "󰢹 "
+
+[username]
+show_always = false
+style_user = "bold #e0a374"
+format = "[$user]($style)@"

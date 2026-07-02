@@ -1,0 +1,271 @@
+{
+	"$help": "https://aka.ms/terminal-documentation",
+	"$schema": "https://aka.ms/terminal-profiles-schema",
+	"actions": [
+		{
+			"command": {
+				"action": "closeTab"
+			},
+			"id": "User.closeTab.0"
+		},
+		{
+			"command": {
+				"action": "sendInput",
+				"input": "\u0017"
+			},
+			"id": "User.sendInput.38DC36AC"
+		},
+		{
+			"command": {
+				"action": "sendInput",
+				"input": "\u001bd"
+			},
+			"id": "User.sendInput.53EE635F"
+		}
+	],
+	"alwaysOnTop": false,
+	"copyFormatting": "none",
+	"copyOnSelect": true,
+	"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+	"experimental.detectURLs": true,
+	"focusFollowMouse": true,
+	"keybindings": [
+		{
+			"id": "Terminal.PasteFromClipboard",
+			"keys": "ctrl+shift+v"
+		},
+		{
+			"id": "User.sendInput.53EE635F",
+			"keys": "ctrl+delete"
+		},
+		{
+			"id": "Terminal.DuplicatePaneRight",
+			"keys": "ctrl+shift+d"
+		},
+		{
+			"id": "Terminal.PrevTab",
+			"keys": "ctrl+shift+tab"
+		},
+		{
+			"id": "Terminal.CopyToClipboard",
+			"keys": "ctrl+c"
+		},
+		{
+			"id": "Terminal.PasteFromClipboard",
+			"keys": "ctrl+v"
+		},
+		{
+			"id": "Terminal.FindText",
+			"keys": "ctrl+shift+f"
+		},
+		{
+			"id": null,
+			"keys": "ctrl+w"
+		},
+		{
+			"id": "User.sendInput.38DC36AC",
+			"keys": "ctrl+backspace"
+		},
+		{
+			"id": "Terminal.ResizePaneRight",
+			"keys": "ctrl+shift+right"
+		},
+		{
+			"id": "Terminal.ToggleCommandPalette",
+			"keys": "ctrl+shift+p"
+		},
+		{
+			"id": "Terminal.MoveFocusDown",
+			"keys": "alt+down"
+		},
+		{
+			"id": "Terminal.OpenNewTab",
+			"keys": "ctrl+shift+t"
+		},
+		{
+			"id": "User.closeTab.0",
+			"keys": "ctrl+shift+w"
+		},
+		{
+			"id": "Terminal.NextTab",
+			"keys": "ctrl+tab"
+		},
+		{
+			"id": "Terminal.SwitchToTab0",
+			"keys": "alt+1"
+		},
+		{
+			"id": "Terminal.SwitchToTab1",
+			"keys": "alt+2"
+		},
+		{
+			"id": "Terminal.MoveFocusLeft",
+			"keys": "alt+left"
+		},
+		{
+			"id": "Terminal.SwitchToTab2",
+			"keys": "alt+3"
+		},
+		{
+			"id": "Terminal.SwitchToTab3",
+			"keys": "alt+4"
+		},
+		{
+			"id": "Terminal.SwitchToTab4",
+			"keys": "alt+5"
+		},
+		{
+			"id": "Terminal.DuplicatePaneDown",
+			"keys": "ctrl+shift+e"
+		},
+		{
+			"id": "Terminal.ClosePane",
+			"keys": "ctrl+shift+q"
+		},
+		{
+			"id": "Terminal.MoveFocusRight",
+			"keys": "alt+right"
+		},
+		{
+			"id": "Terminal.MoveFocusUp",
+			"keys": "alt+up"
+		},
+		{
+			"id": "Terminal.ResizePaneLeft",
+			"keys": "ctrl+shift+left"
+		},
+		{
+			"id": "Terminal.ResizePaneUp",
+			"keys": "ctrl+shift+up"
+		},
+		{
+			"id": "Terminal.ResizePaneDown",
+			"keys": "ctrl+shift+down"
+		},
+		{
+			"id": "Terminal.TogglePaneZoom",
+			"keys": "ctrl+shift+space"
+		},
+		{
+			"id": "Terminal.DecreaseFontSize",
+			"keys": "ctrl+minus"
+		},
+		{
+			"id": "Terminal.IncreaseFontSize",
+			"keys": "ctrl+plus"
+		},
+		{
+			"id": "Terminal.ResetFontSize",
+			"keys": "ctrl+0"
+		}
+	],
+	"launchMode": "maximized",
+	"newTabMenu": [
+		{
+			"type": "remainingProfiles"
+		}
+	],
+	"profiles": {
+		"defaults": {
+			"bellStyle": "none",
+			"colorScheme": "predawn",
+			"cursorShape": "filledBox",
+			"experimental.retroTerminalEffect": false,
+			"font": {
+				"builtinGlyphs": false,
+				"cellHeight": "1.3",
+				"colorGlyphs": true,
+				"face": "JetBrainsMono Nerd Font",
+				"features": {
+					"calt": 0
+				},
+				"size": 10,
+				"weight": "semi-bold"
+			},
+			"historySize": 100000,
+			"intenseTextStyle": "all",
+			"opacity": 100,
+			"padding": "15",
+			"snapOnInput": true,
+			"useAcrylic": true
+		},
+		"list": [
+			{
+				"commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -NoLogo -NoProfileLoadTime",
+				"guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+				"hidden": false,
+				"name": "PowerShell",
+				"source": "Windows.Terminal.PowershellCore"
+			},
+			{
+				"bellStyle": "none",
+				"colorScheme": "predawn",
+				"font": {
+					"cellHeight": "1.4",
+					"size": 13,
+					"weight": "medium"
+				},
+				"guid": "{bb004317-7bd1-58b7-9901-e76d75e54642}",
+				"hidden": false,
+				"intenseTextStyle": "none",
+				"name": "Ubuntu-24.04",
+				"source": "Microsoft.WSL"
+			}
+		]
+	},
+	"rendering.graphicsAPI": "direct3d11",
+	"schemes": [
+		{
+			"background": "#1A1B26",
+			"black": "#15161E",
+			"blue": "#7AA2F7",
+			"brightBlack": "#414868",
+			"brightBlue": "#7AA2F7",
+			"brightCyan": "#7DCFFF",
+			"brightGreen": "#9ECE6A",
+			"brightPurple": "#BB9AF7",
+			"brightRed": "#F7768E",
+			"brightWhite": "#C0CAF5",
+			"brightYellow": "#E0AF68",
+			"cursorColor": "#C0CAF5",
+			"cyan": "#7DCFFF",
+			"foreground": "#C0CAF5",
+			"green": "#9ECE6A",
+			"name": "tokyonight",
+			"purple": "#BB9AF7",
+			"red": "#F7768E",
+			"selectionBackground": "#33467C",
+			"white": "#A9B1D6",
+			"yellow": "#E0AF68"
+		},
+		{
+			"background": "#282828",
+			"black": "#3C3C3C",
+			"blue": "#8197BF",
+			"brightBlack": "#626262",
+			"brightBlue": "#9BB0D1",
+			"brightCyan": "#7DC0F2",
+			"brightGreen": "#B0C467",
+			"brightPurple": "#C8ADC8",
+			"brightRed": "#E57A5C",
+			"brightWhite": "#FFFFFF",
+			"brightYellow": "#FFD28F",
+			"cursorColor": "#F1F1F1",
+			"cyan": "#5AABE6",
+			"foreground": "#F1F1F1",
+			"green": "#99AD6A",
+			"name": "predawn",
+			"purple": "#B294BB",
+			"red": "#CF6A4C",
+			"selectionBackground": "#3E3E3E",
+			"white": "#C9C7BE",
+			"yellow": "#F4BF75"
+		}
+	],
+	"tabSwitcherMode": "mru",
+	"themes": [],
+	"trimPaste": true,
+	"useAcrylicInTabRow": true,
+	"warning.largePaste": true,
+	"warning.multiLinePaste": "automatic"
+}

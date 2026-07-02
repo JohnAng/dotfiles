@@ -1,0 +1,16 @@
+# Backup files created by bootstrap scripts
+*.pre-dotfiles.*
+
+# Neovim runtime state (not part of the config)
+home/.config/nvim/spell/
+home/.config/nvim/session/
+home/.config/nvim/shada/
+home/.config/nvim/.netrwhist
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor swap
+*.swp
+*.swo
