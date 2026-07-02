@@ -21,6 +21,10 @@ vim.opt.rtp:prepend(lazypath)
 --- @docstring
 --- Initialize lazy.nvim and instruct it to autoload the 'plugins' directory.
 require('lazy').setup({ import = 'plugins' }, {
+  dev = {
+    path = '~/Projects',   -- lazy will use ~/Projects/<name> when `dev = true` in a spec
+    fallback = true,       -- if the local dir does not exist, clone from git
+  },
   ui = {
     icons = vim.g.have_nerd_font and {} or {
       cmd = 'CMD',
